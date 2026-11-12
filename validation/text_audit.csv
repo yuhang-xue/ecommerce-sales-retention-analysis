@@ -1,0 +1,2 @@
+invoice_whitespace,stock_whitespace,customer_whitespace,country_whitespace,description_whitespace,non_integer_customer_ids,missing_description
+0,1,0,0,213035,0,4382

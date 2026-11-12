@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-11-11T15:41:11.439545+08:00",
+  "method": "Fresh venv with pinned requirements; relocated project; copied raw inputs; full extraction/build/analysis/report run; exact CSV SHA-256 comparison",
+  "independent_python": "3.13.17",
+  "independent_checks_passed": 35,
+  "files": [
+    {
+      "file": "cohort_cells.csv",
+      "primary_sha256": "4e7cd193aaa53b456b2e04670cd3ca95255a32fc04ecc0bfeaad7d8e6f9b4064",
+      "independent_sha256": "4e7cd193aaa53b456b2e04670cd3ca95255a32fc04ecc0bfeaad7d8e6f9b4064",
+      "identical": true
+    },
+    {
+      "file": "cohort_comparison.csv",
+      "primary_sha256": "1343437a0bca820b9a92c9b7e78f8b0fa7f68b5f92ad1711b735f96cf9616ec1",
+      "independent_sha256": "1343437a0bca820b9a92c9b7e78f8b0fa7f68b5f92ad1711b735f96cf9616ec1",
+      "identical": true
+    },
+    {
+      "file": "factor_contributions.csv",
+      "primary_sha256": "36a0ffaf9b084c2db6c08b44386391b4b5f8650609a617f9a98f39ce4781a85f",
+      "independent_sha256": "36a0ffaf9b084c2db6c08b44386391b4b5f8650609a617f9a98f39ce4781a85f",
+      "identical": true
+    },
+    {
+      "file": "frequency_segments.csv",
+      "primary_sha256": "9051687156b27e43240c6c5d619cc353fdc5e07bb1ea038b02b6ee0f881b8db7",
+      "independent_sha256": "9051687156b27e43240c6c5d619cc353fdc5e07bb1ea038b02b6ee0f881b8db7",
+      "identical": true
+    },
+    {
+      "file": "group_contributions.csv",
+      "primary_sha256": "405558c861344442f92f1f2ac2e0a0a4c630b3045bf6fc4c87d16329e9ad9c76",
+      "independent_sha256": "405558c861344442f92f1f2ac2e0a0a4c630b3045bf6fc4c87d16329e9ad9c76",
+      "identical": true
+    },
+    {
+      "file": "metric_month.csv",
+      "primary_sha256": "1c107769eccbc8effecae76343191cf223293169aff28c3385448e91d5309e2c",
+      "independent_sha256": "1c107769eccbc8effecae76343191cf223293169aff28c3385448e91d5309e2c",
+      "identical": true
+    },
+    {
+      "file": "monthly_customer_type.csv",
+      "primary_sha256": "9df4c8bf3dafc8c0ab145aba394df12b8c8652080e3e03cde6e36debe705edeb",
+      "independent_sha256": "9df4c8bf3dafc8c0ab145aba394df12b8c8652080e3e03cde6e36debe705edeb",
+      "identical": true
+    },
+    {
+      "file": "period_contribution.csv",
+      "primary_sha256": "3a4d7d7c4d9028e3cc0ef988a4f6d8998426e8f4f4be3c6c67d3854db14b25b4",
+      "independent_sha256": "3a4d7d7c4d9028e3cc0ef988a4f6d8998426e8f4f4be3c6c67d3854db14b25b4",
+      "identical": true
+    },
+    {
+      "file": "product_month.csv",
+      "primary_sha256": "2bc67cb5725461c37c59ea8b310aeaecf204c4d137fc1dd27c97f305f6d41c94",
+      "independent_sha256": "2bc67cb5725461c37c59ea8b310aeaecf204c4d137fc1dd27c97f305f6d41c94",
+      "identical": true
+    },
+    {
+      "file": "quality_month.csv",
+      "primary_sha256": "7fea27a84de3f4bc90dcec4b557b8f5c0ac7b9d4ab5b2a0df8f1ea61ce8aa502",
+      "independent_sha256": "7fea27a84de3f4bc90dcec4b557b8f5c0ac7b9d4ab5b2a0df8f1ea61ce8aa502",
+      "identical": true
+    },
+    {
+      "file": "quality_summary.csv",
+      "primary_sha256": "e841f3a2b99baa1e7a85085b56d909884eaf6bb849ba21bb15fd20d46cc53015",
+      "independent_sha256": "e841f3a2b99baa1e7a85085b56d909884eaf6bb849ba21bb15fd20d46cc53015",
+      "identical": true
+    },
+    {
+      "file": "sales_lines.csv",
+      "primary_sha256": "0baf9fae928d73e0fd0cecdaa770d654af3767a50f89b674209cd34fda72862c",
+      "independent_sha256": "0baf9fae928d73e0fd0cecdaa770d654af3767a50f89b674209cd34fda72862c",
+      "identical": true
+    },
+    {
+      "file": "sensitivity.csv",
+      "primary_sha256": "dc41e556363d86911215b6191498b9b97c303aefbce380374c0884683946d35a",
+      "independent_sha256": "dc41e556363d86911215b6191498b9b97c303aefbce380374c0884683946d35a",
+      "identical": true
+    }
+  ],
+  "all_identical": true
+}

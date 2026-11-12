@@ -1,0 +1,77 @@
+{
+  "dataset": "UCI Online Retail II",
+  "doi": "10.24432/C5CG6D",
+  "source_url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+  "download_url": "https://archive.ics.uci.edu/static/public/502/online+retail+ii.zip",
+  "download_completed_at": "2026-11-11T15:04:08.290000+08:00",
+  "verified_at": "2026-11-11T15:04:26.480116+08:00",
+  "verification": "ZIP and XLSX CRC; full worksheet XML scan; SHA-256",
+  "license": "CC BY 4.0",
+  "citation": "Chen, D. (2012). Online Retail II [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5CG6D.",
+  "files": [
+    {
+      "name": "online_retail_ii.zip",
+      "bytes": 45622418,
+      "sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb"
+    },
+    {
+      "name": "online_retail_II.xlsx",
+      "bytes": 45622278,
+      "sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980"
+    },
+    {
+      "name": "uci_dataset_502_metadata.json",
+      "bytes": 2832,
+      "sha256": "ada567e65f3d9481518ad7228da51860c2d5f45dfa6c7efebee8196853735c78"
+    },
+    {
+      "name": "uci_dataset_502_page.html",
+      "bytes": 85208,
+      "sha256": "45201b546313e3e14a83fd5504ee49b70928ad5789cfcca4721b8d33f0c4c3f0"
+    }
+  ],
+  "sheets": [
+    {
+      "name": "Year 2009-2010",
+      "data_rows": 525461,
+      "headers": {
+        "A": "Invoice",
+        "B": "StockCode",
+        "C": "Description",
+        "D": "Quantity",
+        "E": "InvoiceDate",
+        "F": "Price",
+        "G": "Customer ID",
+        "H": "Country"
+      },
+      "min_invoice_date": "2009-12-01 07:45:00",
+      "max_invoice_date": "2010-12-09 20:01:00",
+      "missing_customer_id_rows": 107927,
+      "invalid_or_missing_date_rows": 0
+    },
+    {
+      "name": "Year 2010-2011",
+      "data_rows": 541910,
+      "headers": {
+        "A": "Invoice",
+        "B": "StockCode",
+        "C": "Description",
+        "D": "Quantity",
+        "E": "InvoiceDate",
+        "F": "Price",
+        "G": "Customer ID",
+        "H": "Country"
+      },
+      "min_invoice_date": "2010-12-01 08:26:00",
+      "max_invoice_date": "2011-12-09 12:50:00",
+      "missing_customer_id_rows": 135080,
+      "invalid_or_missing_date_rows": 0
+    }
+  ],
+  "total_data_rows": 1067371,
+  "official_num_instances": 1067371,
+  "metadata_has_missing_values": "no",
+  "official_webpage_has_missing_values": "Yes",
+  "missing_customer_id_rows": 243007,
+  "note": "Source API missing-value flag is not a substitute for measured data quality. Dates have no asserted timezone."
+}

@@ -1,0 +1,8 @@
+control,expected,actual
+raw_to_clean_rows,1067371.0,1067371.0
+purchase_lines_to_orders_amount,19700954.457,19700954.457
+orders_to_month_amount,19700954.457,19700954.457
+known_orders_to_customer_month_amount,17124940.997,17124940.997
+quality_class_rows,1067371.0,1067371.0
+order_key_uniqueness,39516.0,39516.0
+cohort_key_uniqueness,625.0,625.0

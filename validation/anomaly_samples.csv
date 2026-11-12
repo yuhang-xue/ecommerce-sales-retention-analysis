@@ -1,0 +1,17 @@
+issue,line_id,Invoice,StockCode,Description,Quantity,Price,Customer ID,invoice_ts,line_amount,record_type
+zero_price,Year 2009-2010:100245,498855,20988,,-26,0,,2010-02-23 12:18:00,0.0,nonpositive_price
+zero_price,Year 2009-2010:100246,498856,84396,,-110,0,,2010-02-23 12:19:00,0.0,nonpositive_price
+zero_price,Year 2009-2010:100247,498857,17091F,,-25,0,,2010-02-23 12:20:00,0.0,nonpositive_price
+cancelled_positive,Year 2009-2010:76801,C496350,M,Manual,1,373.57,,2010-02-01 08:24:00,373.57,non_merchandise
+missing_customer,Year 2009-2010:10000,490149,21212,PACK OF 72 RETRO SPOT CAKE CASES,11,1.3,,2009-12-04 09:43:00,14.3,positive_purchase
+missing_customer,Year 2009-2010:100000,498780,84568,GIRLS ALPHABET IRON ON PATCHES ,8,0.43,,2010-02-23 10:50:00,3.44,positive_purchase
+missing_customer,Year 2009-2010:100001,498780,84598,BOYS ALPHABET IRON ON PATCHES,5,0.43,,2010-02-23 10:50:00,2.15,positive_purchase
+negative_price,Year 2009-2010:179405,A506401,B,Adjust bad debt,1,-53594.36,,2010-04-29 13:36:00,-53594.36,non_merchandise
+negative_price,Year 2009-2010:276276,A516228,B,Adjust bad debt,1,-44031.79,,2010-07-19 11:24:00,-44031.79,non_merchandise
+negative_price,Year 2009-2010:403474,A528059,B,Adjust bad debt,1,-38925.870000000003,,2010-10-20 12:04:00,-38925.87,non_merchandise
+within_sheet_duplicate,Year 2009-2010:100052,498797,48185,DOOR MAT FAIRY CAKE,1,7.49,15493,2010-02-23 11:14:00,7.49,positive_purchase
+within_sheet_duplicate,Year 2009-2010:100102,498797,37477B,"FLOWER FAIRY MUG+COASTER,LAVENDER",1,3.75,15493,2010-02-23 11:14:00,3.75,positive_purchase
+within_sheet_duplicate,Year 2009-2010:100103,498797,37477B,"FLOWER FAIRY MUG+COASTER,LAVENDER",1,3.75,15493,2010-02-23 11:14:00,3.75,positive_purchase
+negative_quantity,Year 2009-2010:100020,C498782,22328,ROUND SNACK BOXES SET OF 4 FRUITS ,-1,2.95,12755,2010-02-23 10:56:00,-2.95,cancellation
+negative_quantity,Year 2009-2010:100021,C498784,20864,DENIM PATCH PENCIL CASE BUTTERFLY,-1,2.1,12755,2010-02-23 10:58:00,-2.1,cancellation
+negative_quantity,Year 2009-2010:100022,C498784,20855,PINK PATCH PURSE BLUE HEART,-1,1.65,12755,2010-02-23 10:58:00,-1.65,cancellation

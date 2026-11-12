@@ -1,0 +1,26 @@
+stock_code,description,rows,orders,signed_amount,positive_amount
+POST,POSTAGE,2086,2084,110430.41,125682.42
+DOT,DOTCOM POSTAGE,1425,1425,309844.1,309854.11
+M,Manual,1398,1286,-82950.62,339614.89
+C2,CARRIAGE,277,277,13136.0,13426.0
+D,Discount,173,151,-12879.63,397.89
+S,SAMPLES,102,37,-6000.85,136.85
+BANK CHARGES, Bank Charges,100,95,-35482.249,519.241
+ADJUST,Adjustment by Peter on 24/05/2010 1,67,67,6835.24,8897.93
+AMAZONFEE,AMAZON FEE,36,36,-221520.5,20467.8
+gift_0001_30,Dotcomgiftshop Gift Voucher £30.00,29,29,610.09,610.09
+gift_0001_20,Dotcomgiftshop Gift Voucher £20.00,29,29,471.06,471.06
+gift_0001_10,Dotcomgiftshop Gift Voucher £10.00,16,16,126.21,126.21
+CRUK,CRUK Commission,16,16,-7933.43,
+TEST001,This is a test product.,15,15,202.5,225.0
+gift_0001_50,Dotcomgiftshop Gift Voucher £50.00,8,8,253.59,253.59
+gift_0001_40,Dotcomgiftshop Gift Voucher £40.00,7,7,166.09,166.09
+B,Adjust bad debt,6,6,-147614.08,11062.06
+m,Manual,5,4,15.05,15.05
+gift_0001_80,Dotcomgiftshop Gift Voucher £80.00,4,4,0.0,69.56
+ADJUST2,Adjustment by Peter on Jun 25 2010 ,3,3,731.05,731.05
+gift_0001_70,Dotcomgiftshop Gift Voucher £70.00,3,3,59.57,59.57
+gift_0001_60,,2,2,0.0,
+TEST002,This is a test product.,2,2,1.0,1.0
+gift_0001_90,,2,2,0.0,
+C3,,1,1,0.0,

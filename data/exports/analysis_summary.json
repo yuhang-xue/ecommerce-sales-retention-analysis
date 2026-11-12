@@ -1,0 +1,164 @@
+{
+  "config": {
+    "version": "1.0",
+    "analysis_start": "2009-12-01",
+    "complete_end_exclusive": "2011-12-01",
+    "source_end_exclusive": "2011-12-10",
+    "extreme_order_quantile": 0.99,
+    "base_month": "2010-11-01",
+    "current_month": "2011-11-01",
+    "exclude_codes": [
+      "POST",
+      "DOT",
+      "C2",
+      "C3",
+      "D",
+      "S",
+      "BANK CHARGES",
+      "M",
+      "ADJUST",
+      "ADJUST2",
+      "AMAZONFEE",
+      "CRUK",
+      "B",
+      "TEST001",
+      "TEST002"
+    ],
+    "exclude_prefixes": [
+      "GIFT_"
+    ],
+    "cross_sheet_policy": "Keep later sheet for identical eight-field signatures; preserve within-sheet multiplicity.",
+    "within_sheet_policy": "Keep in primary analysis; remove repeated signatures only for sensitivity.",
+    "amount_precision": "DECIMAL(24,6); no per-line penny rounding",
+    "timezone": "Source local timestamp, timezone unspecified; no timezone conversion"
+  },
+  "overview_complete_period": {
+    "lines": 990057,
+    "orders": 38700,
+    "customers": 5824,
+    "amount": 19085461.187,
+    "known_amount": 16611710.567
+  },
+  "base": {
+    "month": "2010-11-01",
+    "orders": 2719,
+    "customers": 1606,
+    "amount": 1435680.122,
+    "known_orders": 2570,
+    "known_amount": 1161854.412,
+    "frequency": 1.6002490660024906,
+    "known_aov": 452.0834287937743,
+    "aov": 528.0176984185363,
+    "identified_amount_coverage": 0.8092710863625094,
+    "complete_month": true,
+    "mom_rate": 0.30752005293321005,
+    "yoy_rate": NaN
+  },
+  "current": {
+    "month": "2011-11-01",
+    "orders": 2751,
+    "customers": 1660,
+    "amount": 1457745.53,
+    "known_orders": 2642,
+    "known_amount": 1142145.77,
+    "frequency": 1.591566265060241,
+    "known_aov": 432.30347085541257,
+    "aov": 529.8965939658306,
+    "identified_amount_coverage": 0.7835014729902825,
+    "complete_month": true,
+    "mom_rate": 0.3172361834173809,
+    "yoy_rate": 0.015369306617731393
+  },
+  "factor_contributions": [
+    {
+      "factor": "customers",
+      "base_value": 1606.0,
+      "current_value": 1660.0,
+      "contribution": 38108.568330501126
+    },
+    {
+      "factor": "frequency",
+      "base_value": 1.6002490660024906,
+      "current_value": 1.591566265060241,
+      "contribution": -6269.094234193521
+    },
+    {
+      "factor": "aov",
+      "base_value": 452.0834287937743,
+      "current_value": 432.30347085541257,
+      "contribution": -51548.1160963076
+    }
+  ],
+  "extreme_order_threshold": 4008.5903,
+  "sensitivity": [
+    {
+      "scenario": "primary",
+      "base_amount": 1435680.122,
+      "current_amount": 1457745.53,
+      "change": 22065.408000000054,
+      "growth": 0.015369306617731393,
+      "known_change": -19708.641999999993,
+      "known_growth": -0.016963090897140765,
+      "threshold": 4008.5903
+    },
+    {
+      "scenario": "dedup_within_sheet",
+      "base_amount": 1429700.782,
+      "current_amount": 1452115.98,
+      "change": 22415.19800000009,
+      "growth": 0.015678244204807346,
+      "known_change": -19444.391999999993,
+      "known_growth": -0.01682072271814572,
+      "threshold": 4008.5903
+    },
+    {
+      "scenario": "exclude_top1pct_orders",
+      "base_amount": 1127499.412,
+      "current_amount": 1089135.62,
+      "change": -38363.7919999999,
+      "growth": -0.034025553886497195,
+      "known_change": -21675.45200000005,
+      "known_growth": -0.02119048524096523,
+      "threshold": 4008.5903
+    },
+    {
+      "scenario": "dedup_and_trim",
+      "base_amount": 1121520.072,
+      "current_amount": 1083506.07,
+      "change": -38014.00199999986,
+      "growth": -0.0338950705823835,
+      "known_change": -21411.20200000005,
+      "known_growth": -0.021053088087403582,
+      "threshold": 4008.5903
+    },
+    {
+      "scenario": "include_nonmerchandise_positive",
+      "base_amount": 1470272.482,
+      "current_amount": 1509496.33,
+      "change": 39223.848,
+      "growth": 0.02667794472126972,
+      "known_change": -10518.662000000011,
+      "known_growth": -0.008972394964548935,
+      "threshold": 4008.5903
+    },
+    {
+      "scenario": "without_overlap_dedup",
+      "base_amount": 1435680.122,
+      "current_amount": 1457745.53,
+      "change": 22065.408000000054,
+      "growth": 0.015369306617731393,
+      "known_change": -19708.641999999993,
+      "known_growth": -0.016963090897140765,
+      "threshold": 4008.5903
+    }
+  ],
+  "checks_passed": 35,
+  "checks_total": 35,
+  "generated_at": "2026-11-11T15:39:27.110793+08:00",
+  "runtime": {
+    "python": "3.13.17",
+    "duckdb": "2.0.0",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4"
+  }
+}

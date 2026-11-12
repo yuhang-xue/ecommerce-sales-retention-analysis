@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "analysis_start": "2009-12-01",
+  "complete_end_exclusive": "2011-12-01",
+  "source_end_exclusive": "2011-12-10",
+  "extreme_order_quantile": 0.99,
+  "base_month": "2010-11-01",
+  "current_month": "2011-11-01",
+  "exclude_codes": ["POST", "DOT", "C2", "C3", "D", "S", "BANK CHARGES", "M", "ADJUST", "ADJUST2", "AMAZONFEE", "CRUK", "B", "TEST001", "TEST002"],
+  "exclude_prefixes": ["GIFT_"],
+  "cross_sheet_policy": "Keep later sheet for identical eight-field signatures; preserve within-sheet multiplicity.",
+  "within_sheet_policy": "Keep in primary analysis; remove repeated signatures only for sensitivity.",
+  "amount_precision": "DECIMAL(24,6); no per-line penny rounding",
+  "timezone": "Source local timestamp, timezone unspecified; no timezone conversion"
+}

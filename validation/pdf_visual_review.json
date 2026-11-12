@@ -1,0 +1,14 @@
+{
+  "reviewed_at": "2026-11-11T15:45:24.396563+08:00",
+  "pdf_sha256": "ce98432e03b5aba17ad48d5a01475abb90e84382dd3399fe9450a503cf376be6",
+  "pages": 7,
+  "renderer": "PyMuPDF cover rendering and pixel comparison against previous six-page PDF; prior body review used Poppler",
+  "visual_review": "New cover inspected: no clipping or missing glyphs. All six body pages are pixel-identical and text-identical to the previously reviewed report. Cover unnumbered; body retains 1/6 through 6/6.",
+  "text_extraction": "Cover and all six body pages contain extractable text",
+  "local_links_checked": 39,
+  "local_links_broken": [],
+  "analysis_checks_passed": 35,
+  "artifact_scope": "Sections 1-10; Tableau and live human presentation not verified",
+  "body_pages": 6,
+  "cover_pages": 1
+}

@@ -1,0 +1,20 @@
+# macOS and local environments
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.pem
+*.key
+# Reproducible large files
+data/raw/*.zip
+data/raw/*.xlsx
+data/processed/
+data/exports/sales_lines.csv
+# Temporary previews and local logs
+tmp/
+validation/*.log
+validation/*preview*/

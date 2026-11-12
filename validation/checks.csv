@@ -1,0 +1,36 @@
+check,passed,detail
+independent_monthly_amount_counts,True,"25 months; exact micro-GBP, orders, customers, known scope"
+independent_frequency,True,0.0
+independent_known_aov,True,0.0
+independent_aov,True,0.0
+raw_decimal_line_amounts,True,1067371 rows; max micro-GBP difference 0
+overlap_multiset_exact,True,"SELECT count(*)=0 FROM ((SELECT Invoice,StockCode,Description,Quantity,InvoiceDate,Price,""Customer ID"",Country FROM clean_lines WHERE source_sheet='Year 2009-2010' AND invoice_ts>='2010-12-01' AND invoice_ts<'2010-12-10' EXCEPT ALL SELECT Invoice,StockCode,Description,Quantity,InvoiceDate,Price,""Customer ID"",Country FROM clean_lines WHERE source_sheet='Year 2010-2011' AND invoice_ts>='2010-12-01' AND invoice_ts<'2010-12-10') UNION ALL (SELECT Invoice,StockCode,Description,Quantity,InvoiceDate,Price,""Customer ID"",Country FROM clean_lines WHERE source_sheet='Year 2010-2011' AND invoice_ts>='2010-12-01' AND invoice_ts<'2010-12-10' EXCEPT ALL SELECT Invoice,StockCode,Description,Quantity,InvoiceDate,Price,""Customer ID"",Country FROM clean_lines WHERE source_sheet='Year 2009-2010' AND invoice_ts>='2010-12-01' AND invoice_ts<'2010-12-10'))"
+raw_row_conservation,True,SELECT (SELECT count(*) FROM raw_lines)=(SELECT count(*) FROM clean_lines)
+unique_source_line,True,SELECT count(*)=count(DISTINCT line_id) FROM clean_lines
+unique_order_key,True,SELECT count(*)=count(DISTINCT order_key) FROM order_summary
+invoice_no_customer_country_date_conflict,True,SELECT count(*)=0 FROM invoice_audit WHERE customers>1 OR countries>1 OR dates>1 OR (missing_customer_rows>0 AND missing_customer_rows<rows)
+order_amount_reconciliation,True,SELECT (SELECT sum(line_amount) FROM clean_lines WHERE is_valid_purchase)=(SELECT sum(amount) FROM order_summary)
+join_no_fanout,True,SELECT (SELECT count(*) FROM purchase_lines)=(SELECT count(*) FROM clean_lines WHERE is_valid_purchase)
+join_amount_unchanged,True,SELECT (SELECT sum(line_amount) FROM purchase_lines)=(SELECT sum(amount) FROM order_summary)
+customer_month_amount,True,SELECT (SELECT sum(amount) FROM customer_month)=(SELECT sum(amount) FROM order_summary WHERE customer_id IS NOT NULL)
+cohort_unique_cells,True,"SELECT count(*)=count(DISTINCT (first_month,month_age)) FROM cohort_cells"
+cohort_numerator_bounds,True,SELECT count(*)=0 FROM cohort_cells WHERE returning_customers<0 OR returning_customers>cohort_size
+cohort_incomplete_null,True,SELECT count(*)=0 FROM cohort_cells WHERE NOT complete_observation AND (returning_customers IS NOT NULL OR repurchase_rate IS NOT NULL)
+cohort_complete_nonnull,True,SELECT count(*)=0 FROM cohort_cells WHERE complete_observation AND (returning_customers IS NULL OR repurchase_rate IS NULL)
+cohort_month0_identity,True,SELECT count(*)=0 FROM cohort_cells WHERE month_age=0 AND complete_observation AND returning_customers!=cohort_size
+no_invalid_required_rows,True,SELECT count(*)=0 FROM clean_lines WHERE record_type='invalid_required_field'
+overlap_only_expected_dates,True,SELECT count(*)=0 FROM clean_lines WHERE cross_sheet_duplicate AND (invoice_ts<'2010-12-01' OR invoice_ts>='2010-12-10')
+standalone_sql_reconciliation,True,7 SQL controls; exact agreement
+independent_cohort_counts,True,300 complete cells; independently reconstructed customer first month
+scope_UK_2011_11,True,"[1286274.78, 2481, 1503]"
+scope_Germany_2011_09_11,True,"[69236.84, 161, 69]"
+scope_All_2011_Q3,True,"[2445353.272, 4609, 2155]"
+multi_product_dedup,True,"[{'order_key': '489434', 'products': 8, 'actual_orders': 1}]"
+shapley_closure,True,{'residual': -7.275957614183426e-12}
+factor_identity,True,Both periods
+group_closure_country,True,22065.408000000003
+group_closure_customer_type,True,22065.40800000001
+group_closure_product,True,22065.408000000007
+synthetic_zero_denominator,True,"Synthetic utility check, not business data"
+synthetic_zero_repurchase,True,Zero != unobserved
+synthetic_shapley,True,Synthetic 24 -> 60; mixed interactions

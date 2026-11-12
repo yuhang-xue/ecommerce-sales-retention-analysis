@@ -1,0 +1,6 @@
+record_type,rows,invoices,signed_amount,absolute_amount
+positive_purchase,1015088,39516,19700954.457,19700954.457
+cross_sheet_duplicate,22523,1088,377488.45,500216.85
+cancellation,17974,7406,-719692.94,719692.94
+nonpositive_price,5974,5331,0.0,0.0
+non_merchandise,5812,5466,-71499.399,1737821.461

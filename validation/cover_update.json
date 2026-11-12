@@ -1,0 +1,9 @@
+{
+  "changed_at": "2026-11-11T15:45:24.396563+08:00",
+  "change": "Added one unnumbered cover; body pages unchanged",
+  "script": "scripts/make_report.py",
+  "script_sha256": "2e82df50cecaa64db408eef9ad060474bea9b8ace408b3b1697167f18a99269c",
+  "pdf_sha256": "ce98432e03b5aba17ad48d5a01475abb90e84382dd3399fe9450a503cf376be6",
+  "verification": "Seven pages; six body pages exact text and pixel match; cover visually inspected",
+  "analysis_rerun": "Not needed for cover-only change; run_manifest.json remains the historical full-analysis run record"
+}

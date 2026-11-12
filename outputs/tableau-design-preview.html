@@ -1,0 +1,37 @@
+<div id="retail-designs" class="viz-carousel" aria-label="看板美化方案" data-previous-label="上一款" data-next-label="下一款">
+  <section data-variant="简洁商务" aria-label="简洁商务方案"><div class="retail-screen business"></div></section>
+  <section data-variant="轻盈卡片" aria-label="轻盈卡片方案" hidden><div class="retail-screen soft"></div></section>
+</div>
+<style>
+#retail-designs .retail-screen{--paper:light-dark(#fff,#19212b);--ink:light-dark(#243447,#e4ecf4);--sub:light-dark(#627487,#a7b6c6);--line:light-dark(#e7edf3,#354252);--accent:#377faf;background:var(--paper);color:var(--ink);font-family:Arial,"PingFang SC",sans-serif;padding:26px;box-sizing:border-box;min-height:760px}
+#retail-designs .soft{--accent:#248a87;background:light-dark(#f1f5f7,#131d25)}
+#retail-designs h2{font-size:25px;font-weight:600;margin:0 0 7px}#retail-designs h3{font-size:15px;font-weight:600;margin:0 0 14px}
+#retail-designs .subtitle,#retail-designs .foot{font-size:11px;color:var(--sub);line-height:1.7}
+#retail-designs .filters{display:flex;gap:20px;margin:20px 0;flex-wrap:wrap;font-size:12px;color:var(--sub)}
+#retail-designs .filter-value{display:inline-block;margin-left:8px;border:1px solid var(--line);padding:7px 12px;color:var(--ink);background:var(--paper)}
+#retail-designs .metrics{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:16px;margin:22px 0 26px}
+#retail-designs .metric{padding:12px 0;border-top:2px solid var(--line)}
+#retail-designs .metric span{display:block;font-size:12px;color:var(--sub);margin-bottom:10px}#retail-designs .metric strong{font-size:25px;font-weight:600;font-variant-numeric:tabular-nums}#retail-designs .metric small{display:block;font-size:11px;color:var(--sub);margin-top:7px}
+#retail-designs .panel{min-width:0}#retail-designs .lower{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;margin-top:25px}
+#retail-designs .soft .metric,#retail-designs .soft .panel{background:var(--paper);padding:16px;border:0;border-radius:5px}
+#retail-designs .soft .metrics{gap:12px;margin:18px 0}#retail-designs .soft .lower{gap:18px;margin-top:18px}
+#retail-designs .plot{width:100%;height:190px;display:block}#retail-designs .gridline{stroke:var(--line);stroke-width:1}#retail-designs .trendline{fill:none;stroke:var(--accent);stroke-width:3}
+#retail-designs .axis{display:flex;justify-content:space-between;color:var(--sub);font-size:11px;margin-top:5px}
+#retail-designs .barrow{display:grid;grid-template-columns:50px 1fr;align-items:center;gap:10px;margin:7px 0;font-size:11px;color:var(--sub)}#retail-designs .bar{height:11px;background:var(--accent);opacity:.75}#retail-designs .barrow:first-child .bar{opacity:1}
+#retail-designs .customer .barrow{grid-template-columns:95px 1fr;margin:25px 0}#retail-designs .customer .bar{height:23px}#retail-designs .customer .unknown{background:light-dark(#aab7c4,#7e8d9e)}#retail-designs .customer .new{opacity:.45}
+#retail-designs .foot{border-top:1px solid var(--line);margin-top:22px;padding-top:12px}
+@media(max-width:650px){#retail-designs .metrics{grid-template-columns:1fr 1fr}#retail-designs .lower{grid-template-columns:1fr}#retail-designs .retail-screen{padding:16px;min-height:1120px}#retail-designs .metric strong{font-size:21px}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('retail-designs');
+const bars=[['22423',100],['85123A',79],['85099B',55],['47566',46],['84879',44],['22086',34],['23166',25],['79321',24],['22386',23],['22197',23]];
+const markup=`<header><h2>电商经营概览</h2><div class="subtitle">公开数据个人项目 · UCI Online Retail II</div></header>
+<div class="filters"><div>国家<span class="filter-value">全部国家 ▾</span></div><div>月份范围<span class="filter-value">2009/12 — 2011/11</span></div></div>
+<div class="metrics"><div class="metric"><span>商品正向交易金额</span><strong>19,085,461.19</strong><small>GBP</small></div><div class="metric"><span>购买订单数</span><strong>38,700</strong><small>去重订单</small></div><div class="metric"><span>已识别购买客户</span><strong>5,824</strong><small>范围内去重</small></div><div class="metric"><span>客单价</span><strong>493.16</strong><small>GBP / 订单</small></div></div>
+<div class="panel"><h3>月度交易金额趋势 <span class="subtitle"> / GBP</span></h3><svg class="plot" viewBox="0 0 900 180" preserveAspectRatio="none" role="img" aria-label="月度趋势形状示意"><line class="gridline" x1="0" y1="20" x2="900" y2="20"/><line class="gridline" x1="0" y1="70" x2="900" y2="70"/><line class="gridline" x1="0" y1="120" x2="900" y2="120"/><line class="gridline" x1="0" y1="170" x2="900" y2="170"/><polyline class="trendline" points="4,100 42,122 80,134 118,104 156,122 194,123 232,116 270,124 308,119 346,99 384,71 422,20 460,104 498,122 536,142 574,113 612,138 650,107 688,109 726,121 764,110 802,64 840,52 896,15"/></svg><div class="axis"><span>2009年12月</span><span>2010年11月</span><span>2011年11月</span></div></div>
+<div class="lower"><div class="panel"><h3>商品交易金额 Top10</h3>${bars.map(([name,width])=>`<div class="barrow"><span>${name}</span><div class="bar" style="width:${width}%"></div></div>`).join('')}<div class="axis"><span>商品编码</span><span>交易金额（GBP）</span></div></div><div class="panel customer"><h3>新老客交易金额构成</h3><div class="barrow"><span>老客月份交易</span><div class="bar" style="width:100%"></div></div><div class="barrow"><span>首次观测月交易</span><div class="bar new" style="width:21%"></div></div><div class="barrow"><span>客户ID未知</span><div class="bar unknown" style="width:18%"></div></div><div class="axis"><span>按首次观测购买月份划分</span><span>GBP</span></div></div></div>
+<footer class="foot">有效商品正向交易，不等同于扣除退货后的净销售额；订单和客户按筛选范围去重。<br>布局效果示意 · 指标为已核对值，图形比例仅作样式预览</footer>`;
+root.querySelectorAll('.retail-screen').forEach(screen=>{screen.innerHTML=markup;const state={accent:screen.classList.contains('soft')?'#248a87':'#377faf'};if(globalThis.Tweak){const tweak=new Tweak({container:screen,onChange:()=>screen.style.setProperty('--accent',state.accent)});tweak.addColorPicker(state,'accent',{label:'图表主色'});}});
+})();
+</script>
